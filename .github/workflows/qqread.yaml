@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}
-        XL_HEADER: ${{ secrets.XL_HEADER }}		
+        QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}		
         
     steps:
       - name: Checkout
