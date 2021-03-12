@@ -12,8 +12,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}
-        		
-        
+    		   
     steps:
       - name: Checkout
         run: |
