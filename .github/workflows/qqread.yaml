@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}		
+        QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}
+        XL_HEADER: ${{ secrets.XL_HEADER }}		
         
     steps:
       - name: Checkout
@@ -31,7 +32,7 @@ jobs:
         if: env.QQ_QQreadURL
         run: |
           cd ~/ZHIYONG
-          node Task/xiaole.js
+          node Task/QQread.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
