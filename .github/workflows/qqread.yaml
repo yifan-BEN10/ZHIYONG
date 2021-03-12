@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/yifan-BEN10/bbb.git ~/bbb
+          git clone https://github.com/yifan-BEN10/ZHIYONG.git ~/ZHIYONG
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -25,13 +25,13 @@ jobs:
       - name: npm install
         if: env.QQ_QQreadURL
         run: |
-          cd ~/bbb
+          cd ~/ZHIYONG
           git checkout ZIYE
           npm install
       - name: '运行 【qq阅读】'
         if: env.QQ_QQreadURL
         run: |
-          cd ~/bbb
+          cd ~/ZHIYONG
           node Task/QQread.js
         env:
           
